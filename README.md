@@ -1,3 +1,5 @@
 # lyric generator
 
-https://gpt3-writer-production-d8bb.up.railway.app/
+https://mx-lyrics.up.railway.app
+
+<img src="./assets/2E3.png" alt="idea" />
