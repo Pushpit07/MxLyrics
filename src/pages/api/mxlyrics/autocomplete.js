@@ -5,14 +5,18 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = `
-Generate song lyrics including the lines below. Please make sure the song is filled with feelings and feels like a natural.
+const generateBasePrompt = (language, genre) => {
+	const basePromptPrefix = `
+	Generate song lyrics including the lines below in the ${language} language. It should be in the ${genre} genre. Please make sure the song is filled with feelings and feels like a natural.
 
-Lyrics:
-`;
+	Lyrics:
+	`;
+	return basePromptPrefix;
+};
 
 const generateAction = async (req, res) => {
-	const lyricsAutocompletePrompt = `${basePromptPrefix}${req.body.userInput}`;
+	const basePrompt = generateBasePrompt(req.body.language, req.body.genre);
+	const lyricsAutocompletePrompt = `${basePrompt}${req.body.userInput}`;
 
 	const baseCompletion = await openai.createCompletion({
 		model: "text-davinci-003",

@@ -5,14 +5,18 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = `
-Write me a song with the title below. Please make sure the song is filled with feelings and feels like a natural.
-
-Title:
-`;
+const generateBasePrompt = (language, genre) => {
+	const basePromptPrefix = `
+	Write me a song with the title below in the ${language} language. It should be in the ${genre} genre. Please make sure the song is filled with feelings and feels like a natural.
+	
+	Title:
+	`;
+	return basePromptPrefix;
+};
 
 const generateAction = async (req, res) => {
-	const lyricsGeneratePrompt = `${basePromptPrefix}${req.body.userInput}\n`;
+	const basePrompt = generateBasePrompt(req.body.language, req.body.genre);
+	const lyricsGeneratePrompt = `${basePrompt}${req.body.userInput}\n`;
 
 	const baseCompletion = await openai.createCompletion({
 		model: "text-davinci-003",
