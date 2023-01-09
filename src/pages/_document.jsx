@@ -7,9 +7,9 @@ export default function Document() {
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="shortcut icon" href="/favicon.ico" />
 
-				<meta property="og:title" content="GPT-3 Writer" key="title" />
-				<meta property="og:description" content="build with buildspace" key="description" />
-				<meta property="og:image" content="https://cdn.buildspace.so/courses/gpt3-writer/project-og.jpg" />
+				<meta property="og:title" content="MxLyrics" key="title" />
+				<meta property="og:description" content="Helping you fastrack your music creation process" key="description" />
+				<meta property="og:image" content="/mxv_og.png" />
 				<meta name="twitter:card" content="summary_large_image"></meta>
 
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
