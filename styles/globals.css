@@ -2,29 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-	@variants responsive {
-		/* Hide scrollbar for Chrome, Safari and Opera */
-		.no-scrollbar::-webkit-scrollbar {
-			display: none;
-		}
-
-		/* Hide scrollbar for IE, Edge and Firefox */
-		.no-scrollbar {
-			-ms-overflow-style: none; /* IE and Edge */
-			scrollbar-width: none; /* Firefox */
-		}
-	}
-}
-
 html,
 body {
 	padding: 0 !important;
 	margin: 0 !important;
 	@apply font-primary;
-	@apply bg-light-200 dark:bg-dark-600 scroll-smooth;
-	@apply text-dark-600 dark:text-light-100;
-	z-index: -2 !important;
+	@apply bg-dark-600 scroll-smooth;
+	@apply text-light-100;
 }
 
 a {
@@ -37,7 +21,6 @@ a {
 }
 
 /* Badge styles */
-
 .badge-container {
 	display: flex;
 	bottom: 20px;

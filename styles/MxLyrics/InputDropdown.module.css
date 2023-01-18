@@ -2,8 +2,8 @@
 	@apply inline-flex items-center justify-between text-sm font-medium text-gray-700 bg-light-100 border-2 border-[#777777] w-full px-4 py-2 rounded-md hover:border-[#6cc027];
 }
 
-.countries-dropdown-menu-button {
-	@apply inline-flex items-center justify-between text-sm font-medium text-gray-700 bg-light-100 border-2 border-[#777777] w-full px-4 py-1 rounded-md hover:border-[#6cc027];
+.menu-button-rounded {
+	@apply inline-flex items-center justify-between text-sm font-medium text-gray-400 bg-dark-600 w-full px-4 py-2 rounded-full hover:border-[#6cc027];
 }
 
 .menu-item-div {
